@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos - EdiCursos</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/componente.css">
+    <link rel="stylesheet" href="./css/mensagens.css">
+
+    <script src="./js/calcula-media.js" defer ></script>
+    <script src="./js/index.js" defer ></script>
+    <script src="./js/excluir-aluno.js" defer ></script>
+    <script src="./js/consultar-alunos.js" defer ></script>
+    <script src="./js/salvar-aluno-api.js" defer ></script>
+
+</head>
+<body>
+    <header>
+        <div class="caixa">
+            <h1 class="titulo-pagina">EdiCursos</h1>
+        </div>
+    </header>
+    <main>
+        <div class="caixa">
+            <h2 class="titulo-h2">Lista de alunos</h2>
+
+            <div class="row">
+                <div class="col-10 col-s-12"></div>
+                <div class="col-2 col-s-12">
+                    <button id="btnConsultarAluno" class="btn btn-info">Consultar alunos</button>
+                </div>
+            </div>
+
+            <table id="tabela-alunos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Trabalho</th>
+                        <th>Prova</th>
+                        <th>Média</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="aluno" id="primeiro-aluno" >
+                        <td class="td-nome">Patrícia</td>
+                        <td class="td-trabalho">10.0</td>
+                        <td class="td-prova">10.0</td>
+                        <td class="td-media">0</td>
+                        <td class="td-acoes">
+                            <span class="btn-excluir">
+                                excluir
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="aluno">
+                        <td class="td-nome">João</td>
+                        <td class="td-trabalho">7.0</td>
+                        <td class="td-prova">4.0</td>
+                        <td class="td-media">0</td>
+                        <td class="td-acoes">
+                            <span class="btn-excluir">
+                                excluir
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="aluno">
+                        <td class="td-nome">Fernanda</td>
+                        <td class="td-trabalho">9.5</td>
+                        <td class="td-prova">10.0</td>
+                        <td class="td-media">0</td>
+                        <td class="td-acoes">
+                            <span class="btn-excluir">
+                                excluir
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="aluno">
+                        <td class="td-nome">Roberto</td>
+                        <td class="td-trabalho">8.0</td>
+                        <td class="td-prova">7.0</td>
+                        <td class="td-media">0</td>
+                        <td class="td-acoes">
+                            <span class="btn-excluir">
+                                excluir
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="aluno">
+                        <td class="td-nome">Jocieli</td>
+                        <td class="td-trabalho">6.0</td>
+                        <td class="td-prova">9.5</td>
+                        <td class="td-media">0</td>
+                        <td class="td-acoes">
+                            <span class="btn-excluir">
+                                excluir
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="aluno">
+                        <td class="td-nome">Gabriel</td>
+                        <td class="td-trabalho">5.2</td>
+                        <td class="td-prova">7.8</td>
+                        <td class="td-media">0</td>
+                        <td class="td-acoes">
+                            <span class="btn-excluir">
+                                excluir
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <section>
+        <div class="caixa">
+            <h2 class="titulo-h2">
+                Cadastro de aluno
+            </h2>
+            <form id="frmAluno">
+                <div class="row">
+                    <div class="col-12 col-s-12" id="divMensagens">
+                        <!--Div para as mensagens do formulário-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-s-12">
+                        <label for="txtNome" class="rotulo">Nome:</label>
+                        <input type="text" id="txtNome" name="nome" placeholder="Informe o nome do aluno" maxlength="50" required class="caixa-texto">
+                    </div>
+                    <div class="col-4 col-s-6">
+                        <label for="txtTrabalho" class="rotulo">Nota trabalho:</label>
+                        <input type="number" id="txtTrabalho" name="trabalho" class="caixa-texto" placeholder="Nota do trabalho" step=".01">
+                    </div>
+                    <div class="col-4 col-s-6">
+                        <label for="txtProva" class="rotulo">Nota prova:</label>
+                        <input type="number" id="txtProva" name="prova" class="caixa-texto" placeholder="Nota da prova" step=".01">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 col-s-12"></div>
+                    <div class="col-2 col-s-12">
+                        <button type="submit" id="btnSalvarAluno" class="btn btn-info">Salvar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
